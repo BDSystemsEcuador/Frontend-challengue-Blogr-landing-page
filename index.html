@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Overpass:wght@300;600&family=Ubuntu:wght@400;500;700&display=swap" rel="stylesheet">
+  <title>Frontend Mentor | [Blogr]</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: content-box;
+    }
+    body{
+      font-family: 'Overpass', sans-serif;
+      background: hsl(210, 11%, 96%);
+/* font-family: 'Ubuntu', sans-serif; */
+    }
+    h1,h2,h3,h4,h5,h6{
+      font-family: 'Ubuntu', sans-serif;
+      font-weight: 100;
+      margin: 20px 0;
+    }
+    p{
+      line-height: 1.5rem;
+    }
+    .img{
+      width: 100%;
+      object-fit: cover;
+    }
+    .container{
+      width: 85%;
+      margin: auto ;
+    }
+    .header{
+      background: linear-gradient(#FF6964 0%, #FF515C 70%);
+      color: white;
+      height: 100vh;
+      position: relative;
+      border-end-start-radius: 100px;
+      overflow: hidden;
+    }
+    .header__body{
+      text-align: center;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+      z-index: 3;
+    }
+    .header__background{
+      position: absolute;
+      left: 0;
+      top: 0;
+      height: 140vh;
+      width: 140vw;
+      background-image: url('images/bg-pattern-intro.svg');
+      background-position:center;
+      background-repeat: no-repeat;
+    
+      z-index: 1;
+    }
+    .nav{
+      position: relative;
+      z-index: 3;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 30px 0;
+    }
+    .nav__icon{
+      height: 30px;
+    }
+    .header__txt{
+      margin: 40px 0;
+      color: white;
+    }
+    .header__buttons{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    .header__button{
+      display: block;
+      color: white;
+      text-decoration: none;
+      border:1px solid white;
+      padding: 12px 5px;
+      font-family: 'Ubuntu', sans-serif;
+      font-weight: bold;
+      border-radius: 40px;
+      min-width: 125px;
+      margin: 3px;
+    }
+    .button--active{
+      background: white;
+      color: #FF515C;
+    }
+
+    .title-copy{
+      text-align: center;
+      color: hsl(208, 49%, 24%);
+      font-weight: bold;
+    }
+    section{
+      margin: 60px auto;
+    }
+    p{
+      line-height: 1.8rem;
+      color:hsl(207, 13%, 34%);
+      text-align: center;
+    }
+    .section-2{
+      margin-top: 170px;
+      position: relative;
+      background: hsl(237, 17%, 21%);
+      border-bottom-left-radius: 70px;
+      background-image: url('images/bg-pattern-circles.svg');
+      background-position: top;
+      background-size: contain;
+      background-repeat: no-repeat ;
+    }
+    .section-2__content{
+      position: relative;
+      top: -140px;
+      
+    }
+    .section-2__title{
+      color: white;
+      text-align: center;
+      font-weight: bold;
+      font-size: 2rem;
+    }
+    .section-2__txt{
+      color: hsl(0, 0%, 100%);
+    }
+
+    .footer{
+      background: hsl(240, 10%, 16%);
+      border-top-right-radius: 70px;
+      text-align: center;
+      padding: 20px 0;
+    }
+    .footer__section{
+      margin: 70px 0;
+    }
+    .footer__title{
+      color: white;
+      font-size: 1.2rem;
+    }
+    .footer__link{
+      color: white;
+      display: block;
+      text-decoration: none;
+      font-size: 1.3rem;
+      margin: 10px;
+    }
+  </style>
+</head>
+<body>
+  <!-- Product
+
+  Overview
+  Pricing
+  Marketplace
+  Features
+  Integrations
+
+  Company
+
+  About
+  Team
+  Blog
+  Careers
+
+  Connect
+
+  Contact
+  Newsletter
+  LinkedIn
+  
+  Login
+  Sign Up -->
+<header class="header ">
+  <nav class="nav container">
+    <img class="nav__icon" src="images/logo.svg" alt="">
+    <img class="nav__bars" src="images/icon-hamburger.svg" alt="">
+  </nav>
+  <div class="header__body container">
+    <h1 class="header__title">A modern publishing platform</h1>
+    <p class="header__txt">Grow your audience and build your online brand</p>
+    <div class="header__buttons">
+      <a href="#" class="header__button button--active">Start for Free</a>
+      <a href="#" class="header__button">Learn More</a>
+    </div>
+  </div>
+  <div class="header__background">
+  </div>
+</header>
+<main class="container">
+  <section>
+    <h2 class="title-copy">Designed for the future</h2>
+    <img class="img" src="images/illustration-editor-desktop.svg" alt="">
+    <h2 class="title-copy">Introducing an extensible editor</h2>
+    <p>Blogr features an exceedingly intuitive interface which lets you focus on one thing: creating content. 
+      The editor supports management of multiple blogs and allows easy manipulation of embeds such as images, 
+      videos, and Markdown. Extensibility with plugins and themes provide easy ways to add functionality or 
+      change the looks of a blog.</p>
+  </section>
+  <section>
+    <h2 class="title-copy">Robust content management</h2>
+    <p>Flexible content management enables users to easily move through posts. Increase the usability of your blog 
+      by adding customized categories, sections, format, or flow. With this functionality, you’re in full control.</p>
+  </section>
+ 
+</main>
+<section class="section-2">
+  <div class="section-2__content container">
+    <img class="img section-2__img" src="images/illustration-phones.svg" alt="">
+    <h1 class="section-2__title">State of the Art Infrastructure</h1>
+    <p class="section-2__txt">
+      With reliability and speed in mind, worldwide data centers provide the backbone for ultra-fast connectivity. 
+  This ensures your site will load instantly, no matter where your readers are, keeping your site competitive.
+    </p>
+  </div>
+</section>
+<main class="container">
+  <section>
+    <h2 class="title-copy">State of the Art Infrastructure</h2>
+    <p>With reliability and speed in mind, worldwide data centers provide the backbone for ultra-fast connectivity. 
+      This ensures your site will load instantly, no matter where your readers are, keeping your site competitive.</p>
+  </section>
+  <section>
+    <h2 class="title-copy">Free, open, simple</h2>
+    <p>Blogr is a free and open source application backed by a large community of helpful developers. It supports 
+      features such as code syntax highlighting, RSS feeds, social media integration, third-party commenting tools, 
+      and works seamlessly with Google Analytics. The architecture is clean and is relatively easy to learn.</p>
+  </section>
+  <section>
+    <h2 class="title-copy">Powerful tooling</h2>
+    <p>Batteries included. We built a simple and straightforward CLI tool that makes customization and deployment a breeze, but
+      capable of producing even the most complicated sites.</p>
+  </section>
+</main>
+<footer class="footer">
+  <div class="footer__content container">
+    <img class="nav__icon" src="images/logo.svg" alt="">
+    <div class="footer__sections">
+      <div class="footer__section">
+        <h5 class="footer__title">Product</h5>
+        <a class="footer__link" href="">Overview</a>
+        <a class="footer__link" href="">Pricing</a>
+        <a class="footer__link" href="">Marketplace</a>
+        <a class="footer__link" href="">Features</a>
+        <a class="footer__link" href="">Integrations</a>
+      </div>      
+      <div class="footer__section">
+        <h5 class="footer__title">Company</h5>
+        <a class="footer__link" href="">About</a>
+        <a class="footer__link" href="">Team</a>
+        <a class="footer__link" href="">Blog</a>
+        <a class="footer__link" href="">Careers</a>
+
+      </div>      
+      <div class="footer__section">
+        <h5 class="footer__title">Connect</h5>
+        <a class="footer__link" href="">Contact</a>
+        <a class="footer__link" href="">Newsletter</a>
+        <a class="footer__link" href="">LinkedIn</a>
+
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Byron Delgado</a>.
+  </div>
+</body>
+</html>
